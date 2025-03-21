@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp_Estudo.MainPage"
+            UnselectedTabColor="LightGray"
+            SelectedTabColor="BlueViolet"
+            BarBackground="Aquamarine">
+
+    <ContentPage 
+        Title="Olá"
+        IconImageSource="dotnet_bot.png">
+        <ScrollView>
+            <VerticalStackLayout Margin="90">
+                <Label x:Name="Lbltext" 
+                       Text="Olá mundo" 
+                       FontSize="30" 
+                       HorizontalOptions="Center" 
+                       Padding="20"/>
+                
+                <Button x:Name="Btnclick" 
+                        Text="Clique" 
+                        HorizontalOptions="Center" 
+                        Clicked="Btnclick_Clicked"/>
+            </VerticalStackLayout>
+        </ScrollView>
+   
+    </ContentPage>
+
+    <ContentPage 
+        Title="Grid"
+        IconImageSource="dotnet_bot.png">
+        <ScrollView>
+            <VerticalStackLayout Margin="10">
+                <WebView x:Name="WVVideo" 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center"
+                         Scale="1" 
+                         />
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <ContentPage 
+        Title="Navegação"
+        IconImageSource="dotnet_bot.png">
+        <ScrollView>
+            <VerticalStackLayout Margin="90">
+                <Label
+               Text="Página de navegação" 
+               FontSize="30" 
+               HorizontalOptions="Center" 
+               Padding="20"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage>
+
+</TabbedPage>
