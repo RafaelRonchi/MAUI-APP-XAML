@@ -1,24 +1,26 @@
-﻿namespace QuizApp
+﻿using QuizApp.Pages;
+
+namespace QuizApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+
+        private async void BtnIniciar_Clicked(object sender, EventArgs e)
         {
-            count++;
+            string pergunta = await DisplayPromptAsync(
+                "Pergunta",
+                "Qual o seu nome?", 
+                "Ok", 
+                "Cancelar");
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            await SecureStorage.Default.SetAsync("nome", pergunta);
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            await Navigation.PushAsync(new Questao1());
         }
     }
 

@@ -32,11 +32,12 @@
 
            
             <Button
-                x:Name="CounterBtn"
+                x:Name="BtnIniciar"
                 Text="Iniciar Atividade" 
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
-                CornerRadius="15"/>
+                CornerRadius="15"
+                Clicked="BtnIniciar_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
