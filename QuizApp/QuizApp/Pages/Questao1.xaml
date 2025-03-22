@@ -14,31 +14,51 @@
             FontAttributes="Bold"
             Padding="10"/>
 
-        <RadioButton 
-            Content="Vermelho"
-            TextColor="Red"
-            Value="certo"
-            FontAttributes="Italic"
-            CheckedChanged="verificar"/>
-        <RadioButton 
-            Content="Vermelho"
-            TextColor="Red"
-            Value="errado"
-            FontAttributes="Italic"
-            CheckedChanged="verificar"/>
-        <RadioButton 
-            Content="Vermelho"
-            TextColor="Red"
-                        Value="errado"
+        <Border 
+            Stroke="Black"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 20"
+            Background="AliceBlue"
+        
+            >
+            <Border.Shadow>
+                <Shadow 
+                    Brush="LightGray"
+                    Offset="10, 10"
+                    Radius="10"
+                    Opacity="0.6">
+            </Border.Shadow>    
+            <VerticalStackLayout Margin="20">
+                
+            <RadioButton 
+                Content="Vermelho"
+                TextColor="Red"
+                Value="certo"
+                FontAttributes="Italic"
+                CheckedChanged="verificar"/>
+            <RadioButton 
+                Content="Vermelho"
+                TextColor="Red"
+                Value="errado"
+                FontAttributes="Italic"
+                CheckedChanged="verificar"/>
+            <RadioButton 
+                Content="Vermelho"
+                TextColor="Red"
+                            Value="errado"
 
-            FontAttributes="Italic"
-            CheckedChanged="verificar"/>
+                FontAttributes="Italic"
+                CheckedChanged="verificar"/>
 
-        <Button 
-            x:Name="BTNVerifica"
-            Text="Verificar resposta"
-            TextColor="White"
-            Clicked="BTNVerifica_Clicked"/>
+            </VerticalStackLayout>
 
+        </Border>
+
+            <Button 
+                x:Name="BTNVerifica"
+                Text="Verificar resposta"
+                TextColor="White"
+                Margin="10"
+                Clicked="BTNVerifica_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
